@@ -1,7 +1,8 @@
 <template>
   <el-menu
     router=true
-    class="el-menu-vertical-demo">
+    class="el-menu-vertical-demo"
+    background-color="#EAEDED">
     <el-menu-item index="/add">
       <i class="el-icon-menu"></i>
       <span slot="title">新生信息输入</span>

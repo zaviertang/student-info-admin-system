@@ -1,14 +1,14 @@
 <template>
   <div class="my-header">
-    <!-- <div class="logo">
+    <div class="logo">
       <img src="@/assets/index/logo.png" alt="">
-    </div> -->
+    </div>
     <el-dropdown>
       <i class="el-icon-setting" style="margin-right: 15px"></i>
       <el-dropdown-menu slot="dropdown">
-        <el-dropdown-item>查看</el-dropdown-item>
-        <el-dropdown-item>新增</el-dropdown-item>
-        <el-dropdown-item>删除</el-dropdown-item>
+        <el-dropdown-item>关于</el-dropdown-item>
+        <!-- <el-dropdown-item>使用说明</el-dropdown-item> -->
+        <!-- <el-dropdown-item>删除</el-dropdown-item> -->
       </el-dropdown-menu>
     </el-dropdown>
     <span>{{myname}}</span>
@@ -46,6 +46,6 @@ export default {
     left: 0;
   }
   .logo img {
-    width: 250px;
+    height: 50px;
   }
 </style>

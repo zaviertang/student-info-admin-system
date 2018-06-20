@@ -17,7 +17,7 @@ export default new Router({
       redirect: '/add/index',
       children: [{
         path: 'index',
-        component: () => import('@/views/errorPage/404')
+        component: () => import('@/views/add/index')
       }]
     },
     {
@@ -26,13 +26,13 @@ export default new Router({
       redirect: '/edu/change',
       children: [{
         path: 'change',
-        component: () => import('@/views/errorPage/404')
+        component: () => import('@/views/edu/change')
       }, {
         path: 'award',
-        component: () => import('@/views/errorPage/404')
+        component: () => import('@/views/edu/award')
       }, {
         path: 'punish',
-        component: () => import('@/views/errorPage/404')
+        component: () => import('@/views/edu/punish')
       }]
     },
     {
