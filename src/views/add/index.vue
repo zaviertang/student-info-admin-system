@@ -41,7 +41,7 @@
     <br><br>
     <el-form-item>
       <el-button type="primary" @click="handleSubmit">立即提交</el-button>
-      <el-button>重置</el-button>
+      <el-button @click="handleReFresh">重置</el-button>
     </el-form-item>
   </el-form>
 </template>
@@ -52,13 +52,13 @@ export default {
   data () {
     return {
       form: {
-        student_id: '1234567890',
-        name: '唐正伟',
+        student_id: '16050103xx',
+        name: '某某某',
         sex: '男',
         department: '计算机科学与技术',
         class: '计科三班',
-        birthday: '0000-00-00',
-        native_place: 'HNUST'
+        birthday: '1900-00-00',
+        native_place: '中华人民共和国'
       },
       addInfo: '',
       loading2: false
@@ -79,6 +79,16 @@ export default {
         }
       })
       // this.dialogTop('submit', 'success')
+    },
+    handleReFresh () {
+      this.dialogTop('重置', 'message')
+      this.form.name = ''
+      this.form.student_id = ''
+      this.form.sex = ''
+      this.form.birthday = ''
+      this.form.native_place = ''
+      this.form.department = ''
+      this.form.class = ''
     },
     dialogTop (message, type) {
       this.$message({

@@ -9,7 +9,11 @@ export default new Router({
     {
       path: '/',
       component: Layout,
-      redirect: '/add'
+      redirect: '/index',
+      children: [{
+        path: 'index',
+        component: () => import('@/views/home/index')
+      }]
     },
     {
       path: '/add',

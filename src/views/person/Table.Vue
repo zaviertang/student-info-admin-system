@@ -68,6 +68,10 @@
             size="mini"
             type="danger"
             @click="handleDelete(scope.row.student_id)">删除</el-button>
+          <el-button
+            size="mini"
+            type="success"
+            @click="handleLog(scope.row.student_id)">奖励记录</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -123,6 +127,7 @@
 import { queryList } from '@/api/table/queryList'
 import { deleteData } from '@/api/table/deleteData'
 import { editData } from '@/api/table/editData'
+import { queryDetail } from '@/api/table/queryDetail'
 export default {
   data () {
     return {
@@ -173,6 +178,18 @@ export default {
       console.log(row)
       this.form = row
       this.editDialogVisible = true
+    },
+    handleLog (id) {
+      // this.dialogTop('查询', 'success')
+      this.loading2 = true
+      queryDetail('/api/queryDetail.php?student_id=' + id).then(res => {
+        this.loading2 = false
+        if (res.data.length === 0) {
+          this.dialogTop('无相关记录!', 'error')
+        } else {
+          alert('奖励记录:' + res.data[0].description)
+        }
+      })
     },
     handleDelete (id) {
       console.log(id)

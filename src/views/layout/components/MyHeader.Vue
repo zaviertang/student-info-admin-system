@@ -1,7 +1,9 @@
 <template>
   <div class="my-header">
     <div class="logo">
-      <img src="@/assets/index/logo.png" alt="">
+      <router-link to="/">
+        <img src="@/assets/index/logo.png" alt="">
+      </router-link>
     </div>
     <el-dropdown>
       <i class="el-icon-setting" style="margin-right: 15px"></i>
@@ -43,7 +45,7 @@ export default {
   .logo {
     position: absolute;
     top: 0;
-    left: 0;
+    left: 20px;
   }
   .logo img {
     height: 50px;

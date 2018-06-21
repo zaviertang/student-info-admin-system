@@ -47,24 +47,28 @@ export default {
     line-height: 60px;
     width: 100%;
     position: fixed;
-    top: 0;
+    top: 10px;
     left: 0;
     z-index: 1000;
-    border-bottom: 1px solid #EBEEF5;
+    border: 1px solid #EBEEF5;
     box-shadow: 2px 2px 10px #888888;
+    border-radius: 10px;
   }
   .my-main {
-    padding-left: 200px;
+    padding-left: 220px;
+    padding-top: 20px;
+    height: 800px;
   }
   .el-aside {
     color: #333;
     background: #fff;
     position: fixed;
-    top: 60px;
-    left: 0;
+    top: 80px;
+    left: 10px;
     height: 100%;
-    z-index: 0;
+    z-index: 1000;
     box-shadow: 2px -2px 10px #888888;
+    border-radius: 10px;
   }
   .el-main {
     /* position: absolute; */
