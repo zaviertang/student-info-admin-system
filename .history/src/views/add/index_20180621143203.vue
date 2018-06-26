@@ -21,9 +21,9 @@
     <el-form-item label="生日" style="width:300px;">
       <el-input v-model="form.birthday"></el-input>
     </el-form-item>
-    <el-form-item label="籍贯"> 
+    <el-form-item label="籍贯">
       <el-input v-model="form.native_place"  style="width:300px;"></el-input>
-    </el-form-item> 
+    </el-form-item>
     <el-form-item label="院系">
       <el-select v-model="form.department" placeholder="请选择院系">
         <el-option label="计算机科学与技术" value="计算机科学与技术"></el-option>
